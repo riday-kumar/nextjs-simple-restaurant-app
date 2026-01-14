@@ -1,6 +1,7 @@
 import FoodCard from "@/components/cards/FoodCard";
 import React from "react";
 import CartItems from "./CartItems";
+import InputSearch from "@/components/InputSearch";
 
 const getFoods = async () => {
   const res = await fetch(
@@ -19,6 +20,7 @@ const foodPage = async () => {
       <h2 className="text-4xl font-bold">
         Total <span className="text-orange-400">{foods.length}</span> Found
       </h2>
+      <InputSearch></InputSearch>
       <div className="flex gap-5">
         <div className="grid grid-cols-3 gap-5 my-10">
           {foods.map((food) => (
